@@ -108,7 +108,7 @@ header {
         flex-wrap: wrap;
     }
 
-    .col {
+    .demo-app .col {
         width: calc(100% / 3);
         padding: 2rem;
     }
@@ -124,6 +124,13 @@ header {
 
     .benefits .col {
         width: 50%;
+    }
+
+    .about-us .col:first-child {
+        width:60%;
+    }
+    .about-us .col:last-child {
+        width: 40%;
     }
 }
 
