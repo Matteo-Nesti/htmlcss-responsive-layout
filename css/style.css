@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body  {
+    font-family: 'PT Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* debug */
+
+.debug {
+    border: dashed red 2px;
+}
+
+/* generics */
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header */
+
+
+header {
+    min-height: 100px;
+    background-color: #0084fd;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.logo {
+    flex-basis: 30%;
+}
+
+.menu {
+    flex-basis: 30%;
+}
+
+.header-menu-link {
+    display: none;
+}
+
+/* === RESPONSIVE === */
+
+@media screen and (min-width: 992px) {
+    .header-menu-link {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+}
