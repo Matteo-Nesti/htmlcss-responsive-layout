@@ -7,6 +7,7 @@
 body  {
     font-family: 'PT Sans', sans-serif;
     font-family: 'Open Sans', sans-serif;
+    padding-top: 120px;
 }
 
 /* debug */
@@ -23,6 +24,12 @@ ul {
 
 a {
     text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+img {
+    width: 100%;
 }
 
 /* utility */
@@ -42,6 +49,11 @@ a {
     padding: 2rem 0;
 }
 
+.btn {
+    display: inline-block;
+    border-radius: 20px;
+}
+
 /* header */
 
 header .container {
@@ -51,22 +63,35 @@ header .container {
 }
 
 header {
-    min-height: 100px;
+    height: 100px;
     background-color: #0084fd;
     display: flex;
     justify-content: space-between;
-
-}
-
-.logo {
-    flex-basis: 30%;
+    align-items: center;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .menu {
-    flex-basis: 30%;
+    display: flex;
+    align-items: center;
 }
 
 .header-menu-link {
+    display: none;
+}
+
+.header-menu-link li {
+    padding: 0 1rem;
+}
+
+.menu .btn {
+    background-color: #fff;
+    color: black;
+    padding: 10px;
     display: none;
 }
 
@@ -87,6 +112,10 @@ header {
 @media screen and (min-width: 1200px) {
     .header-menu-link {
         display: flex;
+    }
+
+    .menu .btn {
+        display: inline-block;
     }
 
     .burger-menu {
