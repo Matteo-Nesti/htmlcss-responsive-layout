@@ -117,6 +117,10 @@ header {
         width: calc(100% / 2);
         flex-grow: 1;
     }
+
+    .partners .col {
+        width: 100%;
+    }
 }
 
 /* desktop responsive */
