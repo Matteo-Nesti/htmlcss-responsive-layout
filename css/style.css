@@ -72,8 +72,12 @@ header {
 
 /* main  */
 
-.col:first-child {
+.demo-app .col:first-child {
     min-height: 1000px;
+}
+
+.planning .col {
+    width: 100%;
 }
 
 /* === RESPONSIVE === */
@@ -90,7 +94,9 @@ header {
     }
 }
 
-/* first section responsive */
+/* main section responsive */
+
+/* tablet responsive */
 
 @media screen and (min-width: 768px ) {
     .container {
@@ -107,18 +113,24 @@ header {
         padding: 2rem;
     }
 
-    .col:first-child {
+    .demo-app .col:first-child {
         width: calc(100% / 2);
         flex-grow: 1;
     }
 }
+
+/* desktop responsive */
 
 @media screen and (min-width: 1200px) {
     .container {
         max-width:1000px ;
     }
 
-    .col:first-child {
+    .demo-app .col:first-child {
        display:flex;
+    }
+
+    .planning .col {
+        width: 50%;
     }
 }
