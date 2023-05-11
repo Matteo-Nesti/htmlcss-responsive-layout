@@ -121,6 +121,10 @@ header {
     .partners .col {
         width: 100%;
     }
+
+    .benefits .col {
+        width: 50%;
+    }
 }
 
 /* desktop responsive */
@@ -136,5 +140,9 @@ header {
 
     .planning .col {
         width: 50%;
+    }
+
+    .benefits .col {
+        width: calc(100% / 3);
     }
 }
