@@ -41,7 +41,7 @@ img {
 }
 
 .container {
-    max-width: 100%;
+    max-width: 400px;
     margin: 0 auto;
 }
 
@@ -56,6 +56,10 @@ img {
 
 .mg-bottom {
     margin-bottom: 3rem;
+}
+
+.bgc-white {
+    background-color: #fff;
 }
 
 /* header */
@@ -159,12 +163,56 @@ header {
 }
 
 /* sec section */
+.planning {
+    background-color: #9792e4;
+    color: #fff;
+    padding: 3rem ;
+    margin: 3rem 0;
+}
 
 .planning .col {
     width: 100%;
 }
 
+.planning .card {
+    padding: 1rem;
+}
 
+.planning img {
+    width: 90%;
+}
+
+.planning h2 {
+    font-size: 35px;
+    margin: 4rem 0;
+}
+
+.card.bgc-white {
+    border-radius: 50px;
+    color: black;
+    text-align: center;
+}
+
+.planning a {
+    color: black;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.circle-btn {
+    margin: 1rem auto;
+    width: 50px;
+    height: 50px;
+    background-color: #9792e4;
+    border-radius: 50%;
+}
+
+.planning p {
+    font-size: 18px;
+    margin: 3rem 0;
+}
+
+/* 
 /* === RESPONSIVE === */
 
 /* header responsive */
@@ -173,11 +221,11 @@ header {
     .header-menu-link {
         display: flex;
     }
-
+    
     .menu .btn {
         display: inline-block;
     }
-
+    
     .burger-menu {
         display: none;
     }
@@ -193,44 +241,57 @@ header {
 
 /* tablet responsive */
 
-@media screen and (min-width: 900px ) {
+@media screen and (min-width: 850px ) {
+    
+    /* first section-responsive */
     .container {
         max-width: 768px;
     }
-
+    
     .row {
         display:flex;
         flex-wrap: wrap;
     }
 
     .demo-app .col {
-        width: calc(100% / 3 - 2rem);
-        margin: 1rem;
+        width: calc(100% / 3 - 1rem);
+        margin: 0.5rem;
     }
-
+    
     .demo-app .col:first-child {
         width: calc(100% / 2);
         flex-grow: 1;
     }
-
+    
     .partners .col {
         width: 100%;
     }
-
+    
     .benefits .col {
         width: 50%;
     }
-
+    
     .about-us .col:first-child {
         width:60%;
     }
     .about-us .col:last-child {
         width: 40%;
     }
-
+    
     .img-card {
-        width: 55%;
+        width: 60%;
         margin: 0;
+    }
+    
+    /* sec sec responsive */
+
+    .planning h2 {
+        font-size: 70px;
+    }
+
+    .card.bgc-white img {
+        margin: 0 auto;
+        width: 70%;
     }
 }
 
@@ -240,29 +301,48 @@ header {
     .container {
         max-width:1150px ;
     }
-
+    
     .demo-app .col:first-child {
-       display:flex;
+        display:flex;
     }
-
+    
     .planning .col {
         width: 50%;
     }
-
+    
     .benefits .col {
         width: calc(100% / 3);
     }
-
+    
     .img-card, .card-large {
         width: 50%;
     } 
-
+    
     .img-card {
         align-self: flex-end;
     }
-
+    
     .mg-bottom {
         margin-bottom: 1.5rem;
     }    
 
+    /* planning section */
+
+    .planning .row {
+        justify-content: center;
+    }
+
+    .col.left {
+        width: 40%;
+    }
+    .col.right {
+        width: 30%;
+        margin-top: 9rem;
+    }
+    
+    .planning h2 {
+        font-size: 30px;
+    }
 }
+
+
