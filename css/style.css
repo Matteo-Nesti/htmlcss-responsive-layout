@@ -30,28 +30,32 @@ a {
 
 img {
     width: 100%;
+    display: block;
 }
 
 /* utility */
+.icon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
 
 .container {
-    max-width: 500px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
-.row {
-    
-}
-
 .col {
-    min-height: 500px;
     width: 100%;
-    padding: 2rem 0;
 }
 
 .btn {
     display: inline-block;
-    border-radius: 20px;
+    border-radius: 25px;
+}
+
+.mg-bottom {
+    margin-bottom: 3rem;
 }
 
 /* header */
@@ -73,6 +77,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
 }
 
 .menu {
@@ -88,6 +93,10 @@ header {
     padding: 0 1rem;
 }
 
+.logo, .menu {
+    padding: 0 20px;
+}
+
 .menu .btn {
     background-color: #fff;
     color: black;
@@ -97,13 +106,64 @@ header {
 
 /* main  */
 
-.demo-app .col:first-child {
-    min-height: 1000px;
+/* first sec */
+
+.demo-app .col {
+    background-color: #b5ddff;
+    border-radius: 20px;
+    margin: 2rem 0;
 }
+
+.demo-app .card-large {
+    padding: 2rem 2rem 0 2rem;   
+}
+
+.demo-app .card {
+    padding: 2rem 2rem 1rem 2rem;
+    text-align: center;
+}
+
+.demo-app .btn {
+    background-color: #0084fd;
+    font-size: 20px;
+    padding: 10px 65px;
+    font-weight: bold;
+}
+
+.demo-app .btn::before {
+    font: var(--fa-font-brands);
+    content: "\f179";
+    padding-right: 10px;
+}
+
+.demo-app h2 {
+    color: #0084fd;
+    font-size: 28px;
+}
+
+.demo-app p {
+    color: #5a6e7f;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 32px;
+}
+
+.demo-app i {
+    color: #0084fd;
+    font-size: 100px;
+}
+
+.img-card {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* sec section */
 
 .planning .col {
     width: 100%;
 }
+
 
 /* === RESPONSIVE === */
 
@@ -125,11 +185,17 @@ header {
 
 /* main section responsive */
 
+@media screen and (min-width:540px) {
+    .container {
+        max-width: 480px;
+    }
+}
+
 /* tablet responsive */
 
-@media screen and (min-width: 768px ) {
+@media screen and (min-width: 900px ) {
     .container {
-        max-width: 740px;
+        max-width: 768px;
     }
 
     .row {
@@ -138,8 +204,8 @@ header {
     }
 
     .demo-app .col {
-        width: calc(100% / 3);
-        padding: 2rem;
+        width: calc(100% / 3 - 2rem);
+        margin: 1rem;
     }
 
     .demo-app .col:first-child {
@@ -161,13 +227,18 @@ header {
     .about-us .col:last-child {
         width: 40%;
     }
+
+    .img-card {
+        width: 55%;
+        margin: 0;
+    }
 }
 
 /* desktop responsive */
 
 @media screen and (min-width: 1200px) {
     .container {
-        max-width:1000px ;
+        max-width:1150px ;
     }
 
     .demo-app .col:first-child {
@@ -181,4 +252,17 @@ header {
     .benefits .col {
         width: calc(100% / 3);
     }
+
+    .img-card, .card-large {
+        width: 50%;
+    } 
+
+    .img-card {
+        align-self: flex-end;
+    }
+
+    .mg-bottom {
+        margin-bottom: 1.5rem;
+    }    
+
 }
