@@ -25,15 +25,37 @@ a {
     text-decoration: none;
 }
 
+/* utility */
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.row {
+    
+}
+
+.col {
+    min-height: 500px;
+    width: 100%;
+    padding: 2rem 0;
+}
+
 /* header */
 
+header .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 
 header {
     min-height: 100px;
     background-color: #0084fd;
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 .logo {
@@ -48,14 +70,55 @@ header {
     display: none;
 }
 
+/* main  */
+
+.col:first-child {
+    min-height: 1000px;
+}
+
 /* === RESPONSIVE === */
 
-@media screen and (min-width: 992px) {
+/* header responsive */
+
+@media screen and (min-width: 1200px) {
     .header-menu-link {
         display: flex;
     }
 
     .burger-menu {
         display: none;
+    }
+}
+
+/* first section responsive */
+
+@media screen and (min-width: 768px ) {
+    .container {
+        max-width: 740px;
+    }
+
+    .row {
+        display:flex;
+        flex-wrap: wrap;
+    }
+
+    .col {
+        width: calc(100% / 3);
+        padding: 2rem;
+    }
+
+    .col:first-child {
+        width: calc(100% / 2);
+        flex-grow: 1;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width:1000px ;
+    }
+
+    .col:first-child {
+       display:flex;
     }
 }
